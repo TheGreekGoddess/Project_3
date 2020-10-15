@@ -152,9 +152,9 @@
           <div class="modal-content">
             <div class="modal-header">
               <!-- UMAR changed id = "SearchBar" and removed placeholder -->
-              <input type="text" class="form-control" id="SearchBar">
+              <input type="text" class="form-control" value = "" autocomplete = "off" id="SearchBar">
               <!-- UMAR added id="close" for click identification in SearchBar JS file -->
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
                 <i class="tim-icons icon-simple-remove"></i>
               </button>
             </div>
@@ -178,7 +178,7 @@
                     <h2 class="card-title"> <i class="tim-icons icon-sound-wave"></i>Attributes</h2>
                     <!-- ODROD update completed -->
                   </div>
-                  <div class="col-sm-6">
+                  <!-- <div class="col-sm-6">
                     <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
                       <label class="btn btn-sm btn-primary btn-simple active" id="0">
                         <input type="radio" name="options" checked>
@@ -202,7 +202,7 @@
                         </span>
                       </label>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <div class="card-body">
@@ -588,6 +588,7 @@
       </footer>
     </div>
   </div>
+  <!-- UMAR Theme Color Changing Cog-->
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">

@@ -466,13 +466,75 @@ demo = {
       data.labels = chart_labels;
       myChartData.update();
     });
-    $("#1").click(function() {
-      var chart_data = [.55, 3.59, .7, 0, .01, .19, .09, .73, .29, .06, .52, .78, .45];
+    
+    //Umar Defining function for click on the dropdown menu
+    d3.selectAll("#SearchItemsContainer").on("click", selection)
+    
+    // UMAR creating function for URL creation for Attributes
+    function attrUrl(artistName){
+      var attributesUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/averageAttributes/${artistName}`
+      console.log (attributesUrl)
+      // Umar sending URL to necassary function to create artist data set
+      getAttrData(attributesUrl)
+      return attributesUrl
+    };
+
+    // UMAR creating function for URL creation for BillBoard Count
+    function billUrl(artistName){
+      var billboardUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/${artistName}`
+      console.log (billboardUrl)
+      return billboardUrl
+    };
+
+    function selection(){
+      
+      // UMAR Selecting Value of the dropdown which has been selected 
+      var selectedArtist = d3.event.target.id
+      
+      // UMAR Removing the list of searched artists names  
+      d3.selectAll(".searchedItems").remove();
+
+      // UMAR replacing SearchBar value by the Selected Artist
+      d3.select("#SearchBar").attr("placeholder",null).attr("value", `${selectedArtist}`)
+      
+      // UMAR clicking on "x" button to close the searchbar
+      document.getElementById("close").click()
+      
+      console.log(selectedArtist)
+      // UMAR sending selected artist name to URL function to build api URL
+      attrUrl(selectedArtist);
+      billUrl(selectedArtist);
+      
+    };
+    
+    // UMAR Function to get artist data after user selection
+    function getAttrData(url){
+
+      d3.json(url).then(function(data){
+        // UMAR artist data list for plotting
+        artistData = []
+        // UMAR loop to go inside the data
+        for  (i = 0; i < data.length; i++){
+          // UMAR loop to get values out of the data set
+          Object.values(data[i]).forEach(value => artistData.push(parseFloat(value)));
+        }
+        // UMAR Removing artist name from the data
+        artistData.shift();
+        console.log(artistData);
+        // Pushing new data to update chart function
+        updateChart(artistData);
+        
+      });
+    };
+
+    // UMAR function to update chart
+    function updateChart(artistData){
+      var chart_data = artistData;
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
       myChartData.update();
-    });
+    }
 
     $("#2").click(function() {
       var chart_data = [.55, 3.59, .7, 0, .01, .19, .09, .73, .29, .06, .52, .78, .45];
