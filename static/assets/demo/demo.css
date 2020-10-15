@@ -61,3 +61,57 @@
   max-width: 530px;
   margin: 0 auto;
 }
+
+/* ODROD */
+.card .avatar {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.card-user .image {
+  height: 250px;
+}
+
+.card-user .image-plain {
+  height: 0;
+  margin-top: 110px;
+}
+
+.card-user .author {
+  text-align: center;
+  text-transform: none;
+  margin-top: -70px;
+}
+
+.card-user .avatar {
+  width: 124px;
+  height: 124px;
+  border: 5px solid #FFFFFF;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.card-user .avatar.border-gray {
+  border-color: #EEEEEE;
+}
+
+.card-user .title {
+  line-height: 24px;
+}
+
+.card-user .content {
+  min-height: 240px;
+}
+
+.card-user .footer,
+.card-price .footer {
+  padding: 5px 15px 10px;
+}
+
+.card-user hr,
+.card-price hr {
+  margin: 5px 15px;
+}
