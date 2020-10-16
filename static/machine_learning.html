@@ -174,81 +174,114 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-header">
-                <h5 class="title">Edit Profile</h5>
+                <h5 class="title">User Song Attribute Input</h5>
               </div>
               <div class="card-body">
                 <form>
                   <div class="row">
-                    <div class="col-md-5 pr-md-1">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>Company (disabled)</label>
+                        <label>Acousticness(0 to 1)</label>
                         <!-- ODROD taking out "disabled="" " -->
-                        <input type="text" class="form-control" placeholder="Company" value="Creative Code Inc.">
+                        <input type="text" class="form-control" placeholder="Company" value="0.74">
                       </div>
                     </div>
                     <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="Username" value="michael23">
+                        <label>Danceability (0 to 1)</label>
+                        <input type="text" class="form-control" placeholder="Username" value="0.83">
                       </div>
                     </div>
-                    <div class="col-md-4 pl-md-1">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" placeholder="mike@email.com">
+                        <label for="exampleInputEmail1">Duration (in minutes)</label>
+                        <input type="email" class="form-control" value="0.92">
                       </div>
                     </div>
                   </div>
+
                   <div class="row">
-                    <div class="col-md-6 pr-md-1">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" placeholder="Company" value="Mike">
+                        <label>Energy (0 to 1)</label>
+                        <input type="text" class="form-control" placeholder="Company" value="0.74">
                       </div>
                     </div>
-                    <div class="col-md-6 pl-md-1">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
+                        <label>Instrumentalness (0 to 1)</label>
+                        <input type="text" class="form-control" placeholder="Last Name" value="0.83">
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-md-1">
+                      <div class="form-group">
+                        <label>Liveness (0 to 1)</label>
+                        <input type="text" class="form-control" placeholder="Home Address" value="0.92">
                       </div>
                     </div>
                   </div>
+
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>Address</label>
-                        <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
+                        <label>Loudness (0 to -60)</label>
+                        <input type="text" class="form-control" placeholder="City" value="0.74">
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-md-1">
+                      <div class="form-group">
+                        <label>Mode (0 to 1)</label>
+                        <input type="text" class="form-control" placeholder="0.83" value="0.83">
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-md-1">
+                      <div class="form-group">
+                        <label>Popularity (0 to 100)</label>
+                        <input type="number" class="form-control" value="0.92">
                       </div>
                     </div>
                   </div>
+
                   <div class="row">
-                    <div class="col-md-4 pr-md-1">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>City</label>
-                        <input type="text" class="form-control" placeholder="City" value="Mike">
+                        <label>Speechiness (0 to -60)</label>
+                        <input type="text" class="form-control" placeholder="City" value="0.74">
                       </div>
                     </div>
-                    <div class="col-md-4 px-md-1">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>Country</label>
-                        <input type="text" class="form-control" placeholder="Country" value="Andrew">
+                        <label>Tempo (0 to 1)</label>
+                        <input type="text" class="form-control" placeholder="Country" value="0.83">
                       </div>
                     </div>
-                    <div class="col-md-4 pl-md-1">
+                    <div class="col-md-3 px-md-1">
                       <div class="form-group">
-                        <label>Postal Code</label>
-                        <input type="number" class="form-control" placeholder="ZIP Code">
+                        <label>Time Signature  (0 to 100)</label>
+                        <input type="number" class="form-control" value="0.92">
                       </div>
                     </div>
                   </div>
+
                   <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-3 px-md-1">
+                      <div class="form-group">
+                        <label>Valence (0 to -60)</label>
+                        <input type="text" class="form-control" placeholder="City" value="0.74">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="row"> -->
+                    <!-- ODROD code commented out -->
+                    <!-- <div class="col-md-8">
                       <div class="form-group">
                         <label>About Me</label>
                         <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
                       </div>
-                    </div>
-                  </div>
+                    </div> -->
+                    <!-- ODROD update ends -->
+                  <!-- </div> -->
                 </form>
               </div>
               <div class="card-footer">
