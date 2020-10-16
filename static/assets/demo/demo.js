@@ -440,7 +440,9 @@ demo = {
       data: {
         labels: chart_labels,
         datasets: [{
+          // ODROD merging changes on 2020.10.15
           label: "My First dataset",
+          // ODROD update complete
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: '#d346b1',
@@ -483,9 +485,59 @@ demo = {
     function billUrl(artistName){
       var billboardUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/${artistName}`
       console.log (billboardUrl)
+      buildBarChart(billboardUrl)
       return billboardUrl
     };
-
+//  ODROD SARAH MERGES START 2020.10.15
+    //SARAH Create a function to populate the bar charts with corresponding values for the selected artist
+    async function buildBarChart(url) {
+    
+      //SARAH Define the Data variable
+      var data = await d3.json(url);
+      //console.log(data);
+  
+      //SARAH Create two arrays of the number of times on Billboard 100 per year and corresponding year
+      var FirstCount = []
+      var FirstYear = []
+  
+      data.forEach(data => {
+        var Count = data.counts
+        FirstCount.push(Count)
+        //console.log(Count);
+      }); 
+  
+      data.forEach(data => {
+        var Year = data.year
+        FirstYear.push(Year)
+        //console.log(Years);
+      }); 
+  
+      //SARAH Creating Object from Years and Countlist Arrays
+      var Combined = {}
+      FirstYear.forEach((key, i) => Combined[key] = FirstCount[i]);
+      //console.log(Combined);
+  
+      //SARAH Creating Array from combined Object
+      var FinalYear = Object.keys(Combined);
+      console.log(FinalYear);
+  
+      var FinalCount = Object.values(Combined);
+      console.log(FinalCount);
+      
+      //SARAH Pushing new data to update chart function
+      updateBarChart(FinalCount, FinalYear);
+      };
+  
+      //SARAH function to update chart
+      function updateBarChart(FinalCount, FinalYear){
+        var bar_chart_data = FinalCount;
+        var bar_chart_labels = FinalYear;
+        var data = BarChartData.config.data;
+        data.datasets[0].data = bar_chart_data;
+        data.labels = bar_chart_labels;
+        BarChartData.update();
+       }
+//  ODROD SARAH MERGES COMPLETE
     function selection(){
       
       // UMAR Selecting Value of the dropdown which has been selected 
@@ -544,6 +596,18 @@ demo = {
       myChartData.update();
     });
 
+//  ODROD SARAH MERGES START 2020.10.15
+    //SARAH Creating Bar Chart
+    // var myChart = new Chart(ctxGreen, {
+    //   type: 'bar',
+    //   data: data,
+    //   options: gradientChartOptionsConfigurationWithTooltipBlue
+
+    // });
+
+    //SARAH Customize chart label variables
+    var bar_chart_labels = ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'];
+    var bar_chart_data = [40, 115, 100, 45, 88, 15, 30, 64, 97, 24, 40, 115, 100, 45, 88, 15, 30, 64, 97, 24, 5];
 
     var ctx = document.getElementById("CountryChart").getContext("2d");
 
@@ -551,19 +615,14 @@ demo = {
 
     gradientStroke.addColorStop(1, 'rgba(29,140,248,0.2)');
     gradientStroke.addColorStop(0.4, 'rgba(29,140,248,0.0)');
-    gradientStroke.addColorStop(0, 'rgba(29,140,248,0)'); //blue colors
+    gradientStroke.addColorStop(0, 'rgba(29,140,248,0)'); 
 
-
-    var myChart = new Chart(ctx, {
+    var config = {
       type: 'bar',
-      responsive: true,
-      legend: {
-        display: false
-      },
       data: {
-        labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+        labels: bar_chart_labels,
         datasets: [{
-          label: "Countries",
+          label: "Count",
           fill: true,
           backgroundColor: gradientStroke,
           hoverBackgroundColor: gradientStroke,
@@ -571,11 +630,20 @@ demo = {
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [53, 20, 10, 80, 100, 45],
+          data: bar_chart_data,
         }]
       },
       options: gradientBarChartConfiguration
-    });
+    };
+
+    var BarChartData = new Chart(ctx, config);
+    $("#0").click(function() {
+      var data = BarChartData.config.data;
+      data.datasets[0].data = bar_chart_data;
+      data.labels = bar_chart_labels;
+      BarChartData.update();
+    }); //SARAH End of Bar Chart Updates
+//  ODROD SARAH MERGES COMPLETE
 
   },
 
