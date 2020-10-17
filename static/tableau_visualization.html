@@ -12,7 +12,7 @@
   </title>
   <!-- ODROD update completed -->
   <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" /> -->
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
   <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
@@ -40,7 +40,7 @@
           </a>
         </div>
         <ul class="nav">
-          <li class="active ">
+          <li >
             <!-- ODROD updated the href, icon and tab name -->
             <a href="../templates/index.html">
               <i class="tim-icons icon-chart-pie-36"></i>
@@ -56,7 +56,7 @@
               <!-- ODROD update completed -->
             </a>
           </li>
-          <li>
+          <li class="active ">
             <!-- ODROD updated the href, icon and tab name -->
             <a href="./tableau_visualization.html">
               <i class="tim-icons icon-chart-bar-32"></i>
@@ -66,9 +66,9 @@
           </li>
           <li>
             <!-- ODROD updated the href, icon and tab name -->
-            <a href="./notifications.html">
+            <a href="./definitions.html">
               <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
+              <p>Definitions</p>
               <!-- ODROD update completed -->
             </a>
           </li>
@@ -125,7 +125,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <!-- ODROD updated tab name -->
+            <!-- ODROD updated tab name, added mt-5 and pt-3 -->
             <a class="navbar-brand" href="javascript:void(0)">Tableau Visualization</a>
             <!-- ODROD update completed -->
           </div>
@@ -137,11 +137,11 @@
           <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
               <!-- ODROD commenting code out -->
-              <!-- <li class="search-bar input-group">
-                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
-                  <span class="d-lg-none d-md-block">Search</span>
-                </button>
-              </li> -->
+              <li class="search-bar input-group">
+                <!-- <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i> -->
+                  <!-- <span class="d-lg-none d-md-block">Search</span> -->
+                <!-- </button> -->
+              </li>
               <!-- ODROD updates complete  -->
                 <!-- UMAR code deleted, ODROD commented out -->
                 <!-- UMAR code deleted, ODROD commented out -->
@@ -172,16 +172,10 @@
       <div class="content">
         <div class="row">
           <div class="col-md-12">
-            <div class="card card-plain">
-              <div class="card-header">
-                <!-- ODROD updated card name -->
-                TITLE NEEDS TO BE UPDATED TO SOMETHING MORE MEANINGFUL
-                <!-- ODROD update completed -->
-              </div>
-              <div class="card-body">
-                <div id="map" class="map"></div>
-              </div>
-            </div>
+            <!-- <div class="card card-plain"> -->
+              <!-- UMAR Tableau Visualization added -->
+              <div class='tableauPlaceholder rounded' id='viz1602965288750' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArtistsTopHit&#47;TOPARTISTS&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;ArtistsTopHit&#47;TOPARTISTS?:language=en-GB&amp;:embed=y&amp;:display_count=y&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArtistsTopHit&#47;TOPARTISTS&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602965288750');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -255,7 +249,7 @@
       </ul>
     </div>
   </div>
-  <!-- UMAR added d3 core library to HTML-->	
+  <!-- UMAR added d3 core library to HTML-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>	
   <!-- UMAR updates end -->
   <!--   Core JS Files   -->
@@ -265,10 +259,12 @@
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Google Maps Plugin    -->
   <!-- Place this tag in your head or just before your close body tag. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- ODROD need to insert Tableau link embedded -->
+  <!-- <script src=""></script> -->
+  <!-- ODROD update complete -->
   <!-- Chart JS -->
   <script src="assets/js/plugins/chartjs.min.js"></script>
-  <!--  Notifications Plugin    -->
+  <!--  Definitions Plugin    -->
   <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
@@ -390,7 +386,7 @@
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
-      demo.initGoogleMaps();
+      // demo.initGoogleMaps();
     });
   </script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>

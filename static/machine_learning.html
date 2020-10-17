@@ -40,7 +40,7 @@
           </a>
         </div>
         <ul class="nav">
-          <li class="active ">
+          <li >
             <!-- ODROD updated the href, icon and tab name -->
             <a href="../templates/index.html">
               <i class="tim-icons icon-chart-pie-36"></i>
@@ -66,13 +66,13 @@
           </li>
           <li>
             <!-- ODROD updated the href, icon and tab name -->
-            <a href="./notifications.html">
+            <a href="./definitions.html">
               <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
+              <p>Definitions</p>
               <!-- ODROD update completed -->
             </a>
           </li>
-          <li>
+          <li class="active ">
             <!-- ODROD updated the href, icon and tab name -->
             <a href="./machine_learning.html">
               <i class="tim-icons icon-atom"></i>
@@ -174,120 +174,188 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-header">
-                <h5 class="title">User Song Attribute Input</h5>
+                <!-- SARAH Updates -->
+                <h5 class="title">Machine Learning Neural Network</h5>
               </div>
               <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Acousticness(0 to 1)</label>
-                        <!-- ODROD taking out "disabled="" " -->
-                        <input type="text" class="form-control" placeholder="Company" value="0.74">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Danceability (0 to 1)</label>
-                        <input type="text" class="form-control" placeholder="Username" value="0.83">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Duration (in minutes)</label>
-                        <input type="email" class="form-control" value="0.92">
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="row">
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Energy (0 to 1)</label>
-                        <input type="text" class="form-control" placeholder="Company" value="0.74">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Instrumentalness (0 to 1)</label>
-                        <input type="text" class="form-control" placeholder="Last Name" value="0.83">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Liveness (0 to 1)</label>
-                        <input type="text" class="form-control" placeholder="Home Address" value="0.92">
-                      </div>
-                    </div>
-                  </div>
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Activation</th>
+                      <th scope="col">Input nodes</th>
+                      <th scope="col">Hidden nodes</th>
+                      <th scope="col">Output nodes</th>
+                      <th scope="col">Epochs</th>
+                      <th scope="col">Accuracy (test data)</th>
+                      <th scope="col">Deep layer</th>
+                      <th scope="col">Accuracy (test data)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>reLu</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.677</td>
+                      <td>1</td>
+                      <td>0.678</td>
+                    </tr>
+                    <tr>
+                      <td>sigmoid</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.677</td>
+                      <td>1</td>
+                      <td>0.681</td>
+                    </tr>
+                    <tr>
+                      <td>linear</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.656</td>
+                      <td>1</td>
+                      <td>0.656</td>
+                    </tr>
+                    <tr>
+                      <td>tanh</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.679</td>
+                      <td>1</td>
+                      <td>0.676</td>
+                    </tr>
+                    <tr>
+                      <td>tanh</td>
+                      <td>13</td>
+                      <td>130</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.678</td>
+                      <td>1</td>
+                      <td>0.675</td>
+                    </tr>
+                    <tr>
+                      <td>tanh</td>
+                      <td>13</td>
+                      <td>130</td>
+                      <td>2</td>
+                      <td>1000</td>
+                      <td>0.677</td>
+                      <td>1</td>
+                      <td>0.625</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>The Accuracy across reLu, sigmoid, linear, and tanh all produced similar Accuracy results. A deep layer was added but the Accuracy did not change much.</p>
+              </div>  
 
-                  <div class="row">
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Loudness (0 to -60)</label>
-                        <input type="text" class="form-control" placeholder="City" value="0.74">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Mode (0 to 1)</label>
-                        <input type="text" class="form-control" placeholder="0.83" value="0.83">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Popularity (0 to 100)</label>
-                        <input type="number" class="form-control" value="0.92">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Speechiness (0 to -60)</label>
-                        <input type="text" class="form-control" placeholder="City" value="0.74">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Tempo (0 to 1)</label>
-                        <input type="text" class="form-control" placeholder="Country" value="0.83">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Time Signature  (0 to 100)</label>
-                        <input type="number" class="form-control" value="0.92">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-3 px-md-1">
-                      <div class="form-group">
-                        <label>Valence (0 to -60)</label>
-                        <input type="text" class="form-control" placeholder="City" value="0.74">
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- <div class="row"> -->
-                    <!-- ODROD code commented out -->
-                    <!-- <div class="col-md-8">
-                      <div class="form-group">
-                        <label>About Me</label>
-                        <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
-                      </div>
-                    </div> -->
-                    <!-- ODROD update ends -->
-                  <!-- </div> -->
-                </form>
+              <div class="card-body">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Activation</th>
+                      <th scope="col">Input nodes</th>
+                      <th scope="col">Hidden nodes</th>
+                      <th scope="col">Output nodes</th>
+                      <th scope="col">Epochs</th>
+                      <th scope="col">Accuracy (test data)</th>
+                      <th scope="col">Deep layer</th>
+                      <th scope="col">Accuracy (test data)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>reLu</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>92</td>
+                      <td>100</td>
+                      <td>0.083</td>
+                      <td>1</td>
+                      <td>0.083</td>
+                    </tr>
+                    <tr>
+                      <td>reLu</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>10</td>
+                      <td>100</td>
+                      <td>0.331</td>
+                      <td>1</td>
+                      <td>0.329</td>
+                    </tr>
+                    <tr>
+                      <td>reLu</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.677</td>
+                      <td>1</td>
+                      <td>0.678</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>Using reLu we adjusted the Output Nodes from 92 to 10 to 2 and found that the Accuracy became more accurate as the Output Nodes are limited.</p>
               </div>
-              <div class="card-footer">
-                <!-- ODROD button renamed -->
-                <button type="submit" class="btn btn-fill btn-primary">Submit</button>
-                <!-- ODROD update completed -->
+
+              <div class="card-body">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Top Song Bin</th>
+                      <th scope="col">Input nodes</th>
+                      <th scope="col">Hidden nodes</th>
+                      <th scope="col">Output nodes</th>
+                      <th scope="col">Epochs</th>
+                      <th scope="col">Accuracy (test data)</th>
+                      <th scope="col">Deep layer</th>
+                      <th scope="col">Accuracy (test data)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.679</td>
+                      <td>1</td>
+                      <td>0.676</td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.617</td>
+                      <td>1</td>
+                      <td>0.613</td>
+                    </tr>
+                    <tr>
+                      <td>25</td>
+                      <td>13</td>
+                      <td>39</td>
+                      <td>2</td>
+                      <td>100</td>
+                      <td>0.677</td>
+                      <td>1</td>
+                      <td>0.659</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>We increased the amount of songs in the top song bin but did not see a change in the Accuracy. </p>
               </div>
             </div>
           </div>
@@ -301,29 +369,17 @@
                     <div class="block block-three"></div>
                     <div class="block block-four"></div>
                     <a href="javascript:void(0)">
-                      <img class="avatar" src="assets/img/emilyz.jpg" alt="...">
-                      <h5 class="title">Mike Andrew</h5>
+                      <img class="avatar" src="" alt="...">
+                      <h5 class="Title"></h5>
                     </a>
                     <p class="description">
-                      Ceo/Co-Founder
+                      ACCURACY
                     </p>
                   </div>
                 </p>
                 <div class="card-description">
-                  Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  0.681
                 </div>
-              </div>
-              <div class="card-footer">
-                <div class="button-container">
-                  <button href="javascript:void(0)" class="btn btn-icon btn-round btn-facebook">
-                    <i class="fab fa-facebook"></i>
-                  </button>
-                  <button href="javascript:void(0)" class="btn btn-icon btn-round btn-twitter">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-                  <button href="javascript:void(0)" class="btn btn-icon btn-round btn-google">
-                    <i class="fab fa-google-plus"></i>
-                  </button>
                 </div>
               </div>
             </div>

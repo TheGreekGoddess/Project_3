@@ -20302,6 +20302,7 @@ Copyright (c) 2015 Daniel Eden
 
 .card-user .image {
   height: 120px;
+  
 }
 
 .card-user .author {
@@ -20391,6 +20392,10 @@ Copyright (c) 2015 Daniel Eden
   border-bottom-color: transparent;
   background-color: transparent;
   position: relative;
+}
+
+.margin92 {
+  margin-top: 92px;
 }
 
 .card-user .card-body {

@@ -12,7 +12,7 @@
   </title>
   <!-- ODROD update completed -->
   <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" /> -->
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
   <link href="../static/assets/css/nucleo-icons.css" rel="stylesheet" />
@@ -67,9 +67,9 @@
           </li>
           <li>
             <!-- ODROD updated the href, icon and tab name -->
-            <a href="../static/notifications.html">
+            <a href="../static/definitions.html">
               <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
+              <p>Definitions</p>
               <!-- ODROD update completed -->
             </a>
           </li>
@@ -215,16 +215,32 @@
         </div>
         <div class="row">
           <div class="col-lg-4">
-            <div class="card card-chart">
-              <div class="card-header">
-                <!-- ODROD updated the class name -->
-                <!-- <h5 class="card-category">Total Shipments</h5> -->
-                <h3 class="card-title"><i class="tim-icons icon-single-02 text-primary"></i>Artist Info</h3>
-                <!-- ODROD update completed -->
-              </div>
+            <!-- ODROD MIRI MERGES START 2020.10.17 -->
+            <div class="card card-user ">
               <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="chartLinePurple"></canvas>
+                <p class="card-text">
+                  <div class="author">
+                    <div class="block block-one"></div>
+                    <div class="block block-two"></div>
+                    <div class="block block-three"></div>
+                    <div class="block block-four"></div>
+                    <a href="javascript:void(0)">
+                      <img class="avatar margin92 icon-single-02 " src="../static/assets/img/default-avatar.png" alt="...">
+                      <h4 class="title" id="artistname" >
+                        Artist Name
+                      </h4>
+                    </a>
+                    <p class="description" id="artistgroup">
+                      Artist Type
+                    </p>
+                    <p class="description" id="artistfollowers">
+                        Followers
+                    </p>
+                  </div>
+                </p>
+                <div class="card-description">
+                  <p id="artistfollowers"></p>
+                  <!-- ODROD MIRI MERGES COMPLETE -->
                 </div>
               </div>
             </div>
@@ -249,12 +265,23 @@
               <div class="card-header">
                 <!-- ODROD commented the line below and updated the class name -->
                 <!-- <h5 class="card-category">Completed Tasks</h5> -->
-                <h3 class="card-title"><i class="tim-icons icon-headphones"></i>Spotify API</h3>
+                <h3 class="card-title"><i class="tim-icons icon-headphones"></i> Albums & Genres </h3>
                 <!-- ODROD update completed -->
               </div>
               <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="chartLineGreen"></canvas>
+                <div class="chart-area" >
+                  <!-- ODROD MIRI MERGES START 2020.10.17 -->
+                  <h4 class="ml-2" id="yearfirstalbum">
+                    First Album Released In
+                  </h4>
+                  <h4 class="ml-2" id="numalbums">
+                    Number of Albums
+                  </h4>
+                  <h4 class="ml-2" id="artistgenres">
+                    Genre
+                  </h4>
+                  <!-- <canvas id="chartLineGreen"></canvas> -->
+                  <!-- ODROD MIRI MERGES COMPLETE -->
                 </div>
               </div>
             </div>
@@ -629,7 +656,7 @@
   <script src="../static/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Google Maps Plugin    -->
   <!-- Place this tag in your head or just before your close body tag. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
   <!-- Chart JS -->
   <script src="../static/assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->

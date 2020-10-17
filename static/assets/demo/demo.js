@@ -329,8 +329,8 @@ demo = {
             zeroLineColor: "transparent",
           },
           ticks: {
-            suggestedMin: 60,
-            suggestedMax: 120,
+            suggestedMin: 0,
+            suggestedMax: 60,
             padding: 20,
             fontColor: "#9e9e9e"
           }
@@ -351,82 +351,83 @@ demo = {
       }
     };
 
-    var ctx = document.getElementById("chartLinePurple").getContext("2d");
+    // ODROD MIRI MERGES START 2020.10.17
+    // var ctx = document.getElementById("chartLinePurple").getContext("2d");
 
-    var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+    // var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, 'rgba(72,72,176,0.2)');
-    gradientStroke.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-    gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+    // gradientStroke.addColorStop(1, 'rgba(72,72,176,0.2)');
+    // gradientStroke.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+    // gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
 
-    var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-      datasets: [{
-        label: "Data",
-        fill: true,
-        backgroundColor: gradientStroke,
-        borderColor: '#d048b6',
-        borderWidth: 2,
-        borderDash: [],
-        borderDashOffset: 0.0,
-        pointBackgroundColor: '#d048b6',
-        pointBorderColor: 'rgba(255,255,255,0)',
-        pointHoverBackgroundColor: '#d048b6',
-        pointBorderWidth: 20,
-        pointHoverRadius: 4,
-        pointHoverBorderWidth: 15,
-        pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 80],
-      }]
-    };
+    // var data = {
+    //   labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+    //   datasets: [{
+    //     label: "Data",
+    //     fill: true,
+    //     backgroundColor: gradientStroke,
+    //     borderColor: '#d048b6',
+    //     borderWidth: 2,
+    //     borderDash: [],
+    //     borderDashOffset: 0.0,
+    //     pointBackgroundColor: '#d048b6',
+    //     pointBorderColor: 'rgba(255,255,255,0)',
+    //     pointHoverBackgroundColor: '#d048b6',
+    //     pointBorderWidth: 20,
+    //     pointHoverRadius: 4,
+    //     pointHoverBorderWidth: 15,
+    //     pointRadius: 4,
+    //     data: [80, 100, 70, 80, 120, 80],
+    //   }]
+    // };
 
-    var myChart = new Chart(ctx, {
-      type: 'line',
-      data: data,
-      options: gradientChartOptionsConfigurationWithTooltipPurple
-    });
+    // var myChart = new Chart(ctx, {
+    //   type: 'line',
+    //   data: data,
+    //   options: gradientChartOptionsConfigurationWithTooltipPurple
+    // });
 
 
-    var ctxGreen = document.getElementById("chartLineGreen").getContext("2d");
+    // var ctxGreen = document.getElementById("chartLineGreen").getContext("2d");
 
-    var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+    // var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, 'rgba(66,134,121,0.15)');
-    gradientStroke.addColorStop(0.4, 'rgba(66,134,121,0.0)'); //green colors
-    gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
+    // gradientStroke.addColorStop(1, 'rgba(66,134,121,0.15)');
+    // gradientStroke.addColorStop(0.4, 'rgba(66,134,121,0.0)'); //green colors
+    // gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
-    var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
-      datasets: [{
-        label: "My First dataset",
-        fill: true,
-        backgroundColor: gradientStroke,
-        borderColor: '#00d6b4',
-        borderWidth: 2,
-        borderDash: [],
-        borderDashOffset: 0.0,
-        pointBackgroundColor: '#00d6b4',
-        pointBorderColor: 'rgba(255,255,255,0)',
-        pointHoverBackgroundColor: '#00d6b4',
-        pointBorderWidth: 20,
-        pointHoverRadius: 4,
-        pointHoverBorderWidth: 15,
-        pointRadius: 4,
-        data: [90, 27, 60, 12, 80],
-      }]
-    };
+    // var data = {
+    //   labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+    //   datasets: [{
+    //     label: "My First dataset",
+    //     fill: true,
+    //     backgroundColor: gradientStroke,
+    //     borderColor: '#00d6b4',
+    //     borderWidth: 2,
+    //     borderDash: [],
+    //     borderDashOffset: 0.0,
+    //     pointBackgroundColor: '#00d6b4',
+    //     pointBorderColor: 'rgba(255,255,255,0)',
+    //     pointHoverBackgroundColor: '#00d6b4',
+    //     pointBorderWidth: 20,
+    //     pointHoverRadius: 4,
+    //     pointHoverBorderWidth: 15,
+    //     pointRadius: 4,
+    //     data: [90, 27, 60, 12, 80],
+    //   }]
+    // };
 
-    var myChart = new Chart(ctxGreen, {
-      type: 'line',
-      data: data,
-      options: gradientChartOptionsConfigurationWithTooltipGreen
+    // var myChart = new Chart(ctxGreen, {
+    //   type: 'line',
+    //   data: data,
+    //   options: gradientChartOptionsConfigurationWithTooltipGreen
 
-    });
-
+    // });
+    // ODROD MIRI MERGES COMPLETE
 
 // ODROD Customize chart label variables
     var chart_labels = ["Acousticness", "Danceability", "Duration", "Energy", "Instrumentalness", "Liveness", "Loudness", "Mode", "Popularity", "Speechiness", "Tempo", "Time Signature", "Valence"];
-    var chart_data = [.55, .59, .7, 0, .01, .19, .09, .73, .29, .06, .52, .78, .45];
+    var chart_data = [.75,.25,.75,.25,.75,.25,.75,.25,.75,.25,.75,.25,.75,.25];
 
     var ctx = document.getElementById("chartBig1").getContext('2d');
 
@@ -441,7 +442,7 @@ demo = {
         labels: chart_labels,
         datasets: [{
           // ODROD merging changes on 2020.10.15
-          label: "My First dataset",
+          // label: "",
           // ODROD update complete
           fill: true,
           backgroundColor: gradientStroke,
@@ -488,6 +489,17 @@ demo = {
       buildBarChart(billboardUrl)
       return billboardUrl
     };
+
+    // ODROD MIRI MERGES START 2020.10.17
+    //Miri function artistUrl
+    function artUrl(artistName){
+      var artistUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/artist_followers/${artistName}`;
+      console.log (artistUrl);
+      getArtistData(artistUrl);
+
+    };
+    // ODROD MIRI MERGES END
+
 //  ODROD SARAH MERGES START 2020.10.15
     //SARAH Create a function to populate the bar charts with corresponding values for the selected artist
     async function buildBarChart(url) {
@@ -556,7 +568,11 @@ demo = {
       // UMAR sending selected artist name to URL function to build api URL
       attrUrl(selectedArtist);
       billUrl(selectedArtist);
-      
+
+      // ODROD MIRI MERGES START 2020.10.17
+      // Miri sending selected artist name to artUrl function to build api URL
+      artUrl(selectedArtist);
+      // ODROD MIRI MERGES COMPLETE
     };
     
     // UMAR Function to get artist data after user selection
@@ -578,6 +594,33 @@ demo = {
         
       });
     };
+
+    // ODROD MIRI MERGES START 2020.10.17
+    function getArtistData(url){
+
+      d3.json(url).then(function(data){
+        singerData = []
+        //data.forEach(value => console.log(value.artist))
+        singerData.push(data[0].artist);
+        singerData.push(data[0].followers);
+        singerData.push(data[0].genres);
+        singerData.push(data[0].group_or_solo);
+        singerData.push(data[0].numalbums);
+        singerData.push(data[0].yearfirstalbum);
+        console.log(singerData)
+        updateDashboard(singerData);
+      });
+    };
+    
+    function updateDashboard(singerData){
+      d3.select("#artistname").text(singerData[0]);
+      d3.select("#artistfollowers").text(`${singerData[1]} followers and counting`)
+      d3.select("#artistgenres").text(`Genre: ${singerData[2]}`)
+      d3.select("#artistgroup").text(` ${singerData[3]} Artist with`)
+      d3.select("#numalbums").text(`Number of Albums: ${singerData[4]}`)
+      d3.select("#yearfirstalbum").text(`First Album Released In: ${singerData[5]}`)
+    }
+    // ODROD MIRI MERGES COMPLETE
 
     // UMAR function to update chart
     function updateChart(artistData){
@@ -606,8 +649,8 @@ demo = {
     // });
 
     //SARAH Customize chart label variables
-    var bar_chart_labels = ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'];
-    var bar_chart_data = [40, 115, 100, 45, 88, 15, 30, 64, 97, 24, 40, 115, 100, 45, 88, 15, 30, 64, 97, 24, 5];
+    var bar_chart_labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'];
+    var bar_chart_data = [50,	30,	50,	30,	50,	30,	50,	30,	50,	30];
 
     var ctx = document.getElementById("CountryChart").getContext("2d");
 
@@ -622,7 +665,7 @@ demo = {
       data: {
         labels: bar_chart_labels,
         datasets: [{
-          label: "Count",
+          // label: "Count",
           fill: true,
           backgroundColor: gradientStroke,
           hoverBackgroundColor: gradientStroke,
