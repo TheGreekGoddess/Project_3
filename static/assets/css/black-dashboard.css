@@ -5860,6 +5860,13 @@ a.badge-darker.focus {
 .alert-success .alert-link {
   color: #00bf9a;
 }
+/* ODROD custom colors for Timeline & Definition */
+.alert-muskatweeters {
+  color: #1d8cf8;
+  background-color: #3f3f5d;
+  border-color: #3f3f5d;
+}
+/* ODROD custom colors for Timeline & Definition */
 
 .alert-info {
   color: #1d8cf8;
@@ -16602,6 +16609,20 @@ p.description {
   font-weight: 300;
 }
 
+/* ODROD SARAH MERGES START 2020.10.18 */
+
+.MLcard-description{
+  font-size: 7rem;
+  text-align: center;
+  color: white!important;
+}
+.MLdescription{
+  font-size: 2rem;
+  text-align: center;
+  margin-top: -30px;
+}
+
+/* ODROD SARAH MERGES COMPLETED  */
 .category,
 .card-category {
   text-transform: capitalize;

@@ -70,15 +70,32 @@ function draw(words) {
   // console.log(data); 
   console.log("Sample Size:" + data.length);
 
-  stopwords = ['i','me','I','my','myself','we','our','ours','ourselves','you','your','yours','yourself','yourselves',
-  'he','him','his','himself','she','her','hers','herself','it','its','itself','they','them','their','theirs','themselves',
-  'what','which','who','whom','this','that','these','those','am','is','are','was','were','be','been','being','have','has',
-  'had','having','do','does','did','doing','a','an','the','and','but','if','or','because','as','until','while','of','at','by',
-  'for','with','about','against','between','into','through','during','before','after','above','below','to','from','up','down',
-  'in','out','on','off','over','under','again','further','then','once','here','there','when','where','why','how','all','any',
-  'both','each','few','more','most','other','some','such','no','nor','not','only','own','same','so','than','too','very','s','t',
-  'can','will','just','don','should','now','nigga','Nigga','niggas','Niggas',"I'm","A",'nigga,',"y'all","don't","it's"," ","I—",
-  "It's","that's","And",'!','/','the','The',","];
+  stopwords = [
+  "a", "A", "about", "About", "ABOUT", "above", "Above", "ABOVE", "after", "After", "AFTER", "again", "Again", "AGAIN", "against", "Against", "AGAINST", "all", "All", "ALL", "am", "Am", "AM", "an", "An", "AN",
+  "and", "And", "AND", "any", "Any", "ANY", "are", "Are", "ARE", "as", "As", "AS", "at", "At", "AT",
+  "be", "Be", "BE", "because", "Because", "BECAUSE", "been", "Been", "BEEN", "before", "Before", "BEFORE", "being", "Being", "BEING", "below", "Below", "BELOW", "between", "Between", "BETWEEN", "big", "Big", "BIG",
+  "both", "Both", "BOTH", "but", "But", "BUT", "by", "By", "BY",
+  "can", "Can", "CAN",
+  "did", "Did", "DID", "do", "Do", "DO", "does", "Does", "DOES", "doing", "Doing", "DOING", "don", "Don", "DON", "don't'", "Don'T'", "DON'T'", "down", "Down", "DOWN", "during", "During", "DURING",
+  "each", "Each", "EACH", "few", "Few", "FEW",
+  "for", "For", "FOR", "from", "From", "FROM", "further", "Further", "FURTHER",
+  "had", "Had", "HAD", "has", "Has", "HAS", "have", "Have", "HAVE", "having", "Having", "HAVING", "he", "He", "HE", "her", "Her", "HER","here", "Here", "HERE", "hers", "Hers", "HERS", "herself", "Herself", "HERSELF",
+  "him", "Him", "HIM", "himself", "Himself", "HIMSELF", "his", "His", "HIS", "how", "How", "HOW",
+  "i—", "I—", "i", "I", "if", "If", "IF", "I'm'", "I'M'", "I'M'", "in", "In", "IN", "into", "Into", "INTO", "is", "Is", "IS", "it", "It", "IT", "it's'", "It's'", "IT'S'", "its", "Its", "ITS", "itself", "Itself", "ITSELF",
+  "just", "Just", "JUST",
+  "let", "Let", "LET", "like", "Like", "LIKE",
+  "me", "Me", "ME", "me,", "Me,", "ME,", "more", "More", "MORE", "most", "Most", "MOST", "my", "My", "MY", "myself", "Myself", "MYSELF",
+  "nigga", "Nigga", "NIGGA", "'nigga", "'Nigga", "'NIGGA", "niggas", "Niggas", "NIGGAS", "no", "No", "NO", "nor", "Nor", "NOR", "not", "Not", "NOT", "now", "Now", "NOW",
+  "of", "Of", "OF", "off", "Off", "OFF", "oh", "Oh", "OH", "on", "On", "ON", "once", "Once", "ONCE", "only", "Only", "ONLY", "or", "Or", "OR", "other", "Other", "OTHER", "our", "Our", "OUR", "ours", "Ours", "OURS", "ourselves",
+  "Ourselves", "OURSELVES", "out", "Out", "OUT", "over", "Over", "OVER", "own", "Own", "OWN",
+  "same", "Same", "SAME", "she", "She", "SHE", "should", "Should", "SHOULD", "so", "So", "SO", "some", "Some", "SOME", "such", "Such", "SUCH",
+  "than", "Than", "THAN", "that", "That", "THAT", "that's'", "That's'", "THAT'S'", "the", "The", "THE", "their", "Their", "THEIR", "theirs", "Theirs", "THEIRS", "them", "Them", "THEM", "themselves", "Themselves", "THEMSELVES",
+  "then", "Then", "THEN", "there", "There", "THERE", "these", "These", "THESE", "they", "They", "THEY", "this", "This", "THIS", "those", "Those", "THOSE", "through", "Through", "THROUGH", "to", "To", "TO", "too", "Too", "TOO",
+  "under", "Under", "UNDER", "until", "Until", "UNTIL", "up", "Up", "UP", "very", "Very", "VERY",
+  "was", "Was", "WAS", "we", "We", "WE", "were", "Were", "WERE", "what", "What", "WHAT", "when", "When", "WHEN", "where", "Where", "WHERE", "which", "Which", "WHICH", "while", "While", "WHILE", "who", "Who", "WHO",
+  "whom", "Whom", "WHOM", "why", "Why", "WHY", "will", "Will", "WILL", "with", "With", "WITH", 
+  "y'all'", "Y'All'", "Y'ALL'", "you", "You", "YOU", "your", "Your", "YOUR", "yours", "Yours", "YOURS", "yourself", "Yourself", "YOURSELF", "yourselves", "Yourselves", "YOURSELVES",
+"!", "/", "—", ",", "?",];
   
   function remove_stopwords(str) {
     reString = []
