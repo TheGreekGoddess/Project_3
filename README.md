@@ -1,13 +1,13 @@
 https://billboard-top-100.herokuapp.com/
 
 ### 2020.10.08 Day 0
-Recipe for a successful A+ project:
-Half a dozen brightest team members, at room temp (LOL!)
-Heads brimming with an abundance of knowledge
-Hearts with a willingness to share this knowledge
-Passion for some brute force analysis
-An hour or two or ten to brainstorm every cool idea in the universe
-A few minutes of objective musing to align on what is practical and achievable in 8-9 days!
+* Recipe for a successful A+ project:
+* Half a dozen brightest team members, at room temp (LOL!)
+* Heads brimming with an abundance of knowledge
+* Hearts with a willingness to share this knowledge
+* Passion for some brute force analysis
+* An hour or two or ten to brainstorm every cool idea in the universe
+* A few minutes of objective musing to align on what is practical and achievable in 8-9 days!
 
 ### 2020.10.10 Day 1: HEROKU & POSTGRES
 We decided to use our old pal Heroku to set-up the DB hosting with the subscription of choice. We then created a Postgres server with the Heroku credentials for the host, input, port, etc.
@@ -17,9 +17,9 @@ As homework, our group decided to each chalk out 2-3 visuals each on what we thi
 
 ### 2020.10.11 - Day 2: APIs & HTML
 https://billboard-top-100.herokuapp.com/api/v1.0/hot100/    
-https://billboard-top-100.herokuapp.com/api/v1.0/hot100/no_lyrics/ 
-https://billboard-top-100.herokuapp.com/api/v1.0/attributesByYear/  
-https://billboard-top-100.herokuapp.com/api/v1.0/averageAttributes/
+https://billboard-top-100.herokuapp.com/api/v1.0/hot100/no_lyrics/    
+https://billboard-top-100.herokuapp.com/api/v1.0/attributesByYear/    
+https://billboard-top-100.herokuapp.com/api/v1.0/averageAttributes/    
 
 We wrote a script and refreshed the tables to get the connection back up and then it lets us know that the script didn't save. So we were presented with a coveted opportunity for a do-over!?!?!
 In parallel, while Ben was working on the do-over, the group finalized the website template that we were gonna use to BLOW YOUR MINDS. We had an AGOT style elimination, and a front runner was selected. Then began the process of brainstorming what graphics we wanted to showcase on our platform. We looked at each attribute and discussed what the appropriate metric representation would look like. We played around with the data in excel and agreed on averages and percentiles to represent the overall data set. Then SQL wizard Ben made the magic of averages happen, and we were all swooning over our data yet again! We chalked out the outline of our website, and finalized the visualizations, and gave ourselves some research as homework!
@@ -50,10 +50,7 @@ Our Machine Learning model is up to 68.1% accuracy! Bob comforted us with our ex
 Back to visualizations, we wanted to display the change in top positions over time. So we used Tableau to visualize artists' appearance on the billboard top 100 chart over the two decades worth of weekly Billboard data. The result was a Racing Bar Chart that outlines the top 15 artists on the Billboard top 100 as the timeline progresses from 1999-2019. An end-user has the option to select the animation for monthly or yearly progression. To keep up with Kevin's challenge of harnessing the power of every topic taught in class, one brave data scientist (who shall remain anonymous) decided to take a walk down the VBA memory lane. Columns in the Billboard top 100 data set that were not essential to the visualization, were eliminated, and artists' appearance counts were calculated using VBA. Tableau allowed us to plot the maximum count of the artist appearances and rank the artist by max count and plot the top 15 artists.
 
 ### 2020.10.18 Day 9: WORD CLOUD, DATA TABLES & HTML
-We get our first Data Table "Billboard Top 5 Solo Artists by Followers" added to the HTML file. We played around with the formatting to ensure it was aesthetically pleasing. We then proceeded to add the second, third, and fourth tables!
-Billboard Top 5 Group Artists by Followers
-Billboard Song Attributes Table
-Billboard Artist Songs & Genre Table
+We get our first Data Table "Billboard Top 5 Solo Artists by Followers" added to the HTML file. We played around with the formatting to ensure it was aesthetically pleasing. We then proceeded to add the second, third, and fourth tables! Billboard Top 5 Group Artists by Followers, Billboard Song Attributes Table, and Billboard Artist Songs & Genre Table.
 We then proceed to embed the Word Cloud into the dashboard, our fifth visualization! It was built using D3 and parses through the data and lists the words that feature most frequently in the selected artist's songs. We censored certain terms and at some point were confounded by the amount of NSFW words used in songs. Our stopword list was going to need to be flipped into a "start word" list! Just kidding!
 The Team profiles are linked to each contributor's Git Hub repository. Various HTML updates continue to be made. The CSS file and I have developed a love and hate relationship at this point.
 
