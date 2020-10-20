@@ -1,7 +1,7 @@
 https://billboard-top-100.herokuapp.com/
 
 ### 2020.10.08 Day 0
-* Recipe for a successful A+ project:
+Recipe for a successful A+ project:
 * Half a dozen brightest team members, at room temp (LOL!)
 * Heads brimming with an abundance of knowledge
 * Hearts with a willingness to share this knowledge
