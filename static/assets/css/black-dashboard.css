@@ -5866,6 +5866,13 @@ a.badge-darker.focus {
   background-color: #3f3f5d;
   border-color: #3f3f5d;
 }
+
+/* ODROD custom css for Bob */
+.TheMaster{
+  max-width: 100% !important;
+  /* max-width: 100% !important; */
+}
+
 /* ODROD custom colors for Timeline & Definition */
 
 .alert-info {
