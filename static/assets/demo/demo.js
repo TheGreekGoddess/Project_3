@@ -754,9 +754,9 @@ demo = {
     
     function updateDashboard(singerData){
       d3.select("#artistname").text(singerData[0]);
-      d3.select("#artistfollowers").text(`${singerData[1]} followers and counting`)
+      d3.select("#artistfollowers").text(`${singerData[1]}+ Followers`)
       d3.select("#artistgenres").text(`Genre: ${singerData[2]}`)
-      d3.select("#artistgroup").text(` ${singerData[3]} Artist with`)
+      d3.select("#artistgroup").text(` ${singerData[3]} Artist`)
       d3.select("#numalbums").text(`Number of Albums: ${singerData[4]}`)
       d3.select("#yearfirstalbum").text(`First Album Released In: ${singerData[5]}`)
     }
