@@ -62,4 +62,4 @@ Once we pushed the latest and greatest to our Git Hub repository, it was linked 
 ### 2020.10.20 Day 11: SHOWTIME
 As we recap the timeline of what we accomplished over a quick span of 9 to 10 days, it is both overwhelming and underwhelming at once. Our journey has been made successful by the guidance of a wonderful teacher like Bob. He has answered every question over the past six months with such care. Irrespective of whether it was for the first time or hundredth time. We're thankful to have Kidus and Kevin help and guide us and our fellow cohort mates. The unchartered conversations, the friendly smack talking of sports teams, the priceless MS Paint musings that Bob blessed us with,  and so much more in between. They will all be missed, as will you, our fellow cohort mates!
 
-© 2020 Muskatweeters
+#### © 2020 Muskatweeters
