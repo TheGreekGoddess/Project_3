@@ -511,7 +511,17 @@ demo = {
       getArtistData(artistUrl);
 
     };
+
+    //Miri function tableUrl
+    function tableUrl(artistName){
+      var dataTableUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/no_lyrics/${artistName}`;
+      console.log (dataTableUrl);
+      getTableData(dataTableUrl);
+
+    };
     // ODROD MIRI MERGES END
+
+
 
 //  ODROD SARAH MERGES START 2020.10.15
     //SARAH Create a function to populate the bar charts with corresponding values for the selected artist
@@ -586,6 +596,7 @@ demo = {
       // ODROD MIRI MERGES START 2020.10.17
       // Miri sending selected artist name to artUrl function to build api URL
       artUrl(selectedArtist);
+      tableUrl(selectedArtist);
       // ODROD MIRI MERGES COMPLETE
     };
     
@@ -749,6 +760,22 @@ demo = {
       d3.select("#numalbums").text(`Number of Albums: ${singerData[4]}`)
       d3.select("#yearfirstalbum").text(`First Album Released In: ${singerData[5]}`)
     }
+    
+    function getTableData(url){
+      d3.json(url).then(function(data){
+        tableData = data;
+        console.log(tableData);
+        updateTable(tableData);
+      });
+    };
+
+    function updateTable(tableData){
+      d3.selectAll("#songDataRow").remove();
+      for (i=0; i<7; i++){
+        $("#songTable").append(`<tr id="songDataRow"> <td> ${tableData[i].name} </td> <td> ${tableData[i].genre} </td> <td> ${tableData[i].weekly_rank} </td></tr>`);
+      }
+    }
+
     // ODROD MIRI MERGES COMPLETE
 
     // UMAR function to update chart
