@@ -18,7 +18,6 @@ https://billboard-top-100.herokuapp.com/api/v1.0/hot100/
 https://billboard-top-100.herokuapp.com/api/v1.0/hot100/no_lyrics/
 https://billboard-top-100.herokuapp.com/api/v1.0/attributesByYear/
 https://billboard-top-100.herokuapp.com/api/v1.0/averageAttributes/
-
 We wrote a script and refreshed the tables to get the connection back up and then it lets us know that the script didn't save. So we were presented with a coveted opportunity for a do-over!?!?!
 In parallel, while Ben was working on the do-over, the group finalized the website template that we were gonna use to BLOW YOUR MINDS. We had an AGOT style elimination, and a front runner was selected. Then began the process of brainstorming what graphics we wanted to showcase on our platform. We looked at each attribute and discussed what the appropriate metric representation would look like. We played around with the data in excel and agreed on averages and percentiles to represent the overall data set. Then SQL wizard Ben made the magic of averages happen, and we were all swooning over our data yet again! We chalked out the outline of our website, and finalized the visualizations, and gave ourselves some research as homework!
 
@@ -60,4 +59,7 @@ The final and sixth visualization of our dashboard is a dynamically updating Art
 On the HTML side of things, The Team profiles were linked to each contributor's LinkedIn profiles. Cause why not?!? We photoshopped the perfect background too! We make some behind the scenes CSS updates.
 Once we pushed the latest and greatest to our Git Hub repository, it was linked to Heroku and our website was live! Sweet satisfaction ensues!
 
+### 2020.10.20 Day 11: SHOWTIME
 As I recap the timeline of what we accomplished over a quick span of 9 to 10 days. It is both overwhelming and underwhelming at once. Our journey has been made successful by the guidance of a wonderful teacher like Bob. He has answered every question over the past six months with such care. Irrespective of whether it was for the first time or hundredth time. We're thankful to have Kidus and Kevin help and guide us and our fellow cohort mates. The unchartered conversations, the friendly smack talking of sports teams, the priceless MS Paint musings that Bob blessed us with,  and so much more in between. They will all be missed, as will you, our fellow cohort mates!
+
+© 2020 Muskatweeters
