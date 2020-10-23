@@ -1,4 +1,4 @@
-[https://billboard-top-100.herokuapp.com/]
+https://billboard-top-100.herokuapp.com/
 
 ### 2020.10.08 Day 0
 Recipe for a successful A+ project:
