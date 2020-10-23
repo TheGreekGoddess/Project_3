@@ -1,4 +1,4 @@
-"10 Years","112","2 Chainz","2Pac","2 Pistols","311","3 Doors Down","3LW","3OH!3","50 Cent","702",
+var artistList = ["10 Years","112","2 Chainz","2Pac","2 Pistols","311","3 Doors Down","3LW","3OH!3","50 Cent","702",
 "Aaron Carter","Aaron Lewis","Aaron Lines","Aaron Tippin","Ace Hood","Action Bronson","Adam Lambert","Adele","Aerosmith","AFI","Afrojack","Afroman","Airwaves","Akon","Alabama","Alanis Morissette","Alan Jackson","Alejandro Sanz",
 "Alexandra Stan","Alex Clare","Alice In Chains","Alicia Keys","Alien Ant Farm","Alisan Porter","Alison Krauss","Aloe Blacc","Alpha Rev","Aly","Amanda","Amanda Perez","Amel Larrieux","American Hi","Amerie","Amy Winehouse",
 "Anastacia","Andy Grammer","Andy Griggs","Andy Williams","Angels","Angie Stone","Anita Baker","Anna Nalick","Annie Lennox","Anthony Hamilton","Anya Marina","A Perfect Circle","Apocalyptica","Arcade Fire","Arctic Monkeys",
@@ -70,4 +70,4 @@
 "Xzibit",
 "Yael Naim","Yandel","Yeah Yeah Yeahs","Yellowcard","YG","Ying Yang Twins","Yo Gotti","Yolanda Adams","Yolanda Be Cool","YoungBloodZ", "Young Buck", "Young Dro", "Young Gunz", "Young The Giant", "Young Thug", "Yung Joc", 
 "Yung L.A.",
-"Zac Brown Band", "Zombie Nation"
+"Zac Brown Band", "Zombie Nation"];
