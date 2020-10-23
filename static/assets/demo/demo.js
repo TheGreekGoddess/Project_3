@@ -351,80 +351,6 @@ demo = {
       }
     };
 
-    // ODROD MIRI MERGES START 2020.10.17
-    // var ctx = document.getElementById("chartLinePurple").getContext("2d");
-
-    // var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-    // gradientStroke.addColorStop(1, 'rgba(72,72,176,0.2)');
-    // gradientStroke.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-    // gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
-
-    // var data = {
-    //   labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-    //   datasets: [{
-    //     label: "Data",
-    //     fill: true,
-    //     backgroundColor: gradientStroke,
-    //     borderColor: '#d048b6',
-    //     borderWidth: 2,
-    //     borderDash: [],
-    //     borderDashOffset: 0.0,
-    //     pointBackgroundColor: '#d048b6',
-    //     pointBorderColor: 'rgba(255,255,255,0)',
-    //     pointHoverBackgroundColor: '#d048b6',
-    //     pointBorderWidth: 20,
-    //     pointHoverRadius: 4,
-    //     pointHoverBorderWidth: 15,
-    //     pointRadius: 4,
-    //     data: [80, 100, 70, 80, 120, 80],
-    //   }]
-    // };
-
-    // var myChart = new Chart(ctx, {
-    //   type: 'line',
-    //   data: data,
-    //   options: gradientChartOptionsConfigurationWithTooltipPurple
-    // });
-
-
-    // var ctxGreen = document.getElementById("chartLineGreen").getContext("2d");
-
-    // var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-    // gradientStroke.addColorStop(1, 'rgba(66,134,121,0.15)');
-    // gradientStroke.addColorStop(0.4, 'rgba(66,134,121,0.0)'); //green colors
-    // gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
-
-    // var data = {
-    //   labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
-    //   datasets: [{
-    //     label: "My First dataset",
-    //     fill: true,
-    //     backgroundColor: gradientStroke,
-    //     borderColor: '#00d6b4',
-    //     borderWidth: 2,
-    //     borderDash: [],
-    //     borderDashOffset: 0.0,
-    //     pointBackgroundColor: '#00d6b4',
-    //     pointBorderColor: 'rgba(255,255,255,0)',
-    //     pointHoverBackgroundColor: '#00d6b4',
-    //     pointBorderWidth: 20,
-    //     pointHoverRadius: 4,
-    //     pointHoverBorderWidth: 15,
-    //     pointRadius: 4,
-    //     data: [90, 27, 60, 12, 80],
-    //   }]
-    // };
-
-    // var myChart = new Chart(ctxGreen, {
-    //   type: 'line',
-    //   data: data,
-    //   options: gradientChartOptionsConfigurationWithTooltipGreen
-
-    // });
-    // ODROD MIRI MERGES COMPLETE
-
 // ODROD Customize chart label variables
     var chart_labels = ["Acousticness", "Danceability", "Duration", "Energy", "Instrumentalness", "Liveness", "Loudness", "Mode", "Popularity", "Speechiness", "Tempo", "Time Signature", "Valence"];
     var chart_data = [.75,.25,.75,.25,.75,.25,.75,.25,.75,.25,.75,.25,.75,.25];
@@ -476,7 +402,6 @@ demo = {
     // UMAR creating function for URL creation for Attributes
     function attrUrl(artistName){
       var attributesUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/averageAttributes/${artistName}`
-      console.log (attributesUrl)
       // Umar sending URL to necassary function to create artist data set
       getAttrData(attributesUrl)
       return attributesUrl
@@ -485,7 +410,6 @@ demo = {
     // UMAR creating function for URL creation for BillBoard Count
     function billUrl(artistName){
       var billboardUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/${artistName}`
-      console.log (billboardUrl)
       buildBarChart(billboardUrl)
       return billboardUrl
     };
@@ -493,35 +417,23 @@ demo = {
     // ****** AYAN creating function for URL creation for WordCloud *****************
     function wordUrl(artistName){
       var wordCloudUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/lyrics/${artistName}`
-      console.log (wordCloudUrl)
       buildWordCloud(wordCloudUrl)
       return wordCloudUrl
     };
-
-
-
-
-
 
     // ODROD MIRI MERGES START 2020.10.17
     //Miri function artistUrl
     function artUrl(artistName){
       var artistUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/artist_followers/${artistName}`;
-      console.log (artistUrl);
       getArtistData(artistUrl);
-
     };
 
     //Miri function tableUrl
     function tableUrl(artistName){
       var dataTableUrl = `https://billboard-top-100.herokuapp.com/api/v1.0/hot100/no_lyrics/${artistName}`;
-      console.log (dataTableUrl);
       getTableData(dataTableUrl);
-
     };
     // ODROD MIRI MERGES END
-
-
 
 //  ODROD SARAH MERGES START 2020.10.15
     //SARAH Create a function to populate the bar charts with corresponding values for the selected artist
@@ -529,7 +441,6 @@ demo = {
     
       //SARAH Define the Data variable
       var data = await d3.json(url);
-      //console.log(data);
   
       //SARAH Create two arrays of the number of times on Billboard 100 per year and corresponding year
       var FirstCount = []
@@ -538,26 +449,21 @@ demo = {
       data.forEach(data => {
         var Count = data.counts
         FirstCount.push(Count)
-        //console.log(Count);
       }); 
   
       data.forEach(data => {
         var Year = data.year
         FirstYear.push(Year)
-        //console.log(Years);
       }); 
   
       //SARAH Creating Object from Years and Countlist Arrays
       var Combined = {}
       FirstYear.forEach((key, i) => Combined[key] = FirstCount[i]);
-      //console.log(Combined);
   
       //SARAH Creating Array from combined Object
       var FinalYear = Object.keys(Combined);
-      console.log(FinalYear);
   
       var FinalCount = Object.values(Combined);
-      console.log(FinalCount);
       
       //SARAH Pushing new data to update chart function
       updateBarChart(FinalCount, FinalYear);
@@ -587,7 +493,6 @@ demo = {
       // UMAR clicking on "x" button to close the searchbar
       document.getElementById("close").click()
       
-      console.log(selectedArtist)
       // UMAR sending selected artist name to URL function to build api URL
       attrUrl(selectedArtist);
       billUrl(selectedArtist);
@@ -631,8 +536,6 @@ demo = {
     var margin = {top: 10, right: 10, bottom: 10, left: 10},
         width = boxwidth - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
-        // console.log(boxwidth);
-        // console.log(boxheight);
     
     // append the svg object to the body of the page
     var svg = d3.select("#my_wordcloud")
@@ -703,13 +606,10 @@ demo = {
             };
           
             String = remove_stopwords(rawString) ;
-            // console.log(String);
             var WordFrequency = wordCount(String);
-            // console.log(WordFrequency);
             WordSorted = Object.keys(WordFrequency).sort(function(a,b){return WordFrequency[b]-WordFrequency[a]});
             Topwords = WordSorted.slice(0,100);
             WordCloud(Topwords);
-            console.log(Topwords); 
           })
     }
 
@@ -728,7 +628,6 @@ demo = {
         }
         // UMAR Removing artist name from the data
         artistData.shift();
-        console.log(artistData);
         // Pushing new data to update chart function
         updateChart(artistData);
         
@@ -740,14 +639,12 @@ demo = {
 
       d3.json(url).then(function(data){
         singerData = []
-        //data.forEach(value => console.log(value.artist))
         singerData.push(data[0].artist);
         singerData.push(data[0].followers);
         singerData.push(data[0].genres);
         singerData.push(data[0].group_or_solo);
         singerData.push(data[0].numalbums);
         singerData.push(data[0].yearfirstalbum);
-        console.log(singerData)
         updateDashboard(singerData);
       });
     };
@@ -764,7 +661,6 @@ demo = {
     function getTableData(url){
       d3.json(url).then(function(data){
         tableData = data;
-        console.log(tableData);
         updateTable(tableData);
       });
     };
