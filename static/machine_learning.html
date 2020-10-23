@@ -18,7 +18,7 @@
   <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <!-- CSS Just for demo purpose -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 </head>
 
@@ -104,20 +104,6 @@
               <!-- ODROD update completed -->
             </a>
           </li>
-          <!-- ODROD code comment starts -->
-          <!-- <li>
-            <a href="./rtl.html">
-              <i class="tim-icons icon-world"></i>
-              <p>RTL Support</p>
-            </a>
-          </li> -->
-          <!-- <li class="active-pro">
-            <a href="./upgrade.html">
-              <i class="tim-icons icon-spaceship"></i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li> -->
-          <!-- ODROD code comment completed -->
         </ul>
       </div>
     </div>
@@ -145,14 +131,10 @@
           <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
               <!-- ODROD commenting code out -->
-              <!-- <li class="search-bar input-group">
-                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
-                  <span class="d-lg-none d-md-block">Search</span>
-                </button>
-              </li> -->
-              <!-- ODROD updates complete  -->
-                <!-- UMAR code deleted, ODROD commented out -->
-                <!-- UMAR code deleted, ODROD commented out -->
+              <li class="search-bar input-group">
+                <!-- UMAR deleteing unnecassary code -->
+              </li>
+              
               <li class="separator d-lg-none"></li>
             </ul>
           </div>
@@ -183,10 +165,13 @@
             <div class="card">
               <div class="card-header">
                 <!-- SARAH Updates -->
-                <h4 class="title">Machine Learning using Neural Network</h4>
+                <h4 class="title">Machine Learning using Neural Network & KNN</h4>
               </div>
               <div class="card-body">
-
+                <!-- UMAR Machine Learning Intro -->
+                <p>The team developed a machine learning model to predict if the song will be a hit based on certain attributes of the song. 
+                  At first we tried to predict the exact popularity of the song but the models accuracy was very low, hence the output nodes were decreased to just two,  
+                  will the song be a hit or a miss? (i.e. Will the song end up in top 10 of the billboard 100?)</p><br>
                 <table class="table table-sm table-responsive-lg">
                   <thead>
                     <tr>
@@ -378,13 +363,11 @@
                     <div class="block block-two"></div>
                     <div class="block block-three"></div>
                     <div class="block block-four"></div>
-                    <a href="javascript:void(0)">
-                      <img class="avatar" src="" alt="...">
-                      <h5 class="Title"></h5>
-                    </a>
+                    <!-- UMAR removed unnecassary code -->
                     <div class="MLcard-description">
-                      68.1%
+                      68.1
                     </div>
+                    <p>PERCENT</p>
                   </div>
                 </p>
                 <div class="MLdescription">
@@ -415,7 +398,7 @@
             </li>
             <!-- ODROD commented code -->
             <li class="nav-item">
-              <!-- ODROD updated the Project 2 details -->
+              <!-- ODROD updated the Project Landfires details -->
               <a href="https://datavisproject2.herokuapp.com/" class="nav-link">
                 Project Landfires
               <!-- ODROD update completed -->
@@ -474,19 +457,13 @@
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap.min.js"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <!-- Place this tag in your head or just before your close body tag. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
   <script src="assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
   <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <!-- UMAR added searchBar JS in the HTML-->
-  <script src="assets/demo/searchbar.js"></script>
-  <!-- UMAR updates end -->
-  <script src="assets/demo/demo.js"></script>
+ 
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -597,14 +574,6 @@
         });
       });
     });
-  </script>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-  <script>
-    window.TrackJS &&
-      TrackJS.install({
-        token: "ee6fab19c5a04ac1a32a645abde4613a",
-        application: "black-dashboard-free"
-      });
   </script>
 </body>
 
